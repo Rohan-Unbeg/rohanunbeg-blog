@@ -1,1 +1,0 @@
-/blog /blog.html 200 /categories/* /categories/:splat.html 200 /posts/* /posts/:splat.html 200
