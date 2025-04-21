@@ -1,0 +1,19 @@
+{
+  "name": "rohanunbeg-blog",
+  "version": "1.0.0",
+  "description": "Blog site with automated image optimization and performance improvements",
+  "main": "index.js",
+  "scripts": {
+    "optimize:images": "imagemin images/* --out-dir=images/optimized --plugin=webp --plugin=pngquant --plugin=jpegtran",
+    "purgecss": "npx purgecss --css css/styles.css --content *.html blog/**/*.html --output css/cleaned.css",
+    "build": "npm run optimize:images && npm run purgecss"
+  },
+  "devDependencies": {
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^8.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webp": "^7.0.0",
+    "purgecss": "^6.0.0"
+  }
+}
