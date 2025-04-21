@@ -1,21 +1,22 @@
-# Ignore Python automation and test scripts
-test_*.txt
-sample_*.txt
+# Ignore build tools, configs, and Python scripts
+node_modules/
+package-lock.json
+package.json
+*.py
 *.md
 *.markdown
-*.py
 
-# Ignore build and dependency files (if any)
-node_modules/
+# Ignore system and editor files
 .DS_Store
-*.log
-
-# Ignore OS and editor files
 Thumbs.db
 .vscode/
 .idea/
 
-# Allow only production files
+# Ignore logs and temp files
+*.log
+npm-debug.log*
+
+# Only allow production files
 !index.html
 !about.html
 !contact.html
@@ -26,3 +27,15 @@ Thumbs.db
 !js/
 !images/
 !blog/
+!site.webmanifest
+!_headers
+
+# Ignore original, non-optimized images (keep only optimized for production)
+images/aiagents.webp
+images/cicd.webp
+images/codingassistant.webp
+images/testing.webp
+images/tinymodel.webp
+
+# Allow optimized images
+!images/optimized/
