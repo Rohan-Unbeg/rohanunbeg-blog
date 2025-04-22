@@ -82,73 +82,47 @@
       type="image/png"
     />
     <link href="site.webmanifest" rel="manifest" />
-    <link href="css/cleaned-blog-index.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <!-- Inline critical CSS for above-the-fold (header, nav, hero section) -->
     <style>
-      .cta {
-        background: var(--darker-color);
-        color: var(--light-text);
-        padding: 4rem 0;
+      :root {
+        --primary-color: #3a86ff;
+        --secondary-color: #8338ec;
+        --accent-color: #ff006e;
+        --dark-color: #0d1117;
+        --darker-color: #090b0f;
+        --light-color: #f8f9fa;
+        --text-color: #333;
+        --light-text: #f8f9fa;
+        --gray-color: #495057;
+        --light-gray: #e9ecef;
+        --container-width: 1200px;
+        --header-height: 70px;
+        --transition: all 0.2s ease;
+        --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        --gradient: linear-gradient(135deg,var(--primary-color),var(--secondary-color));
       }
-
-      .cta-content {
-        max-width: 700px;
-        margin: 0 auto;
-        text-align: center;
-      }
-
-      .cta h2 {
-        margin-bottom: 1rem;
-        font-size: 2rem;
-      }
-
-      .cta p {
-        margin-bottom: 2rem;
-        opacity: 0.9;
-      }
-
-      .newsletter-form {
-        display: flex;
-        max-width: 500px;
-        margin: 0 auto;
-      }
-
-      .newsletter-form input {
-        flex: 1;
-        padding: 0.8rem 1.5rem;
-        border: none;
-        border-radius: 5px 0 0 5px;
-        font-size: 1rem;
-      }
-
-      .newsletter-form button {
-        border-radius: 0 5px 5px 0;
-      }
-
-      @media screen and (max-width: 768px) {
-        .newsletter-form {
-          flex-direction: column;
-        }
-
-        .newsletter-form input {
-          border-radius: 5px;
-          margin-bottom: 1rem;
-        }
-
-        .newsletter-form button {
-          border-radius: 5px;
-        }
-      }
+      * {margin:0;padding:0;box-sizing:border-box;}
+      html {scroll-behavior:smooth;font-size:16px;}
+      body {font-family:'Inter',sans-serif;line-height:1.6;color:var(--text-color);background-color:var(--light-color);overflow-x:hidden;text-rendering:optimizeSpeed;min-width:320px;}
+      header {background:var(--darker-color);color:var(--light-text);height:var(--header-height);display:flex;align-items:center;}
+      .logo a {color:var(--primary-color);font-size:2rem;font-weight:700;}
+      nav ul {display:flex;gap:2rem;}
+      nav a {color:var(--dark-color);font-weight:500;}
+      /* Add more critical styles as needed for above-the-fold */
     </style>
+    <!-- Preload Google Fonts stylesheet -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- Preload Font Awesome CSS -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.rel='stylesheet'">
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"></noscript>
+    <!-- Preload LCP Hero Image for performance -->
+    <link rel="preload" as="image" href="images/optimised/hero-bg.jpg" imagesrcset="images/optimised/hero-bg-400.jpg 400w, images/optimised/hero-bg-600.jpg 600w, images/optimised/hero-bg-800.jpg 800w, images/optimised/hero-bg.jpg 1200w" imagesizes="(max-width: 600px) 400px, (max-width: 900px) 600px, 100vw">
+    <!-- Defer non-critical main stylesheet -->
+    <link rel="stylesheet" href="css/cleaned-blog-index.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/cleaned-blog-index.css"></noscript>
+    <!-- Add meta cache-control for static assets (for demonstration) -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000" />
     <script
       async=""
       data-goatcounter="https://rohanunbeg.goatcounter.com/count"
@@ -222,10 +196,11 @@
               <div class="article-image">
                 <img
                   alt="Developer Tools for Collaboration and Project Management in 2025"
-                  height="400"
+                  src="images/optimized/colaboration.webp"
+                  srcset="images/optimized/colaboration.webp 1x, images/optimized/colaboration.webp 2x"
+                  sizes="(max-width: 600px) 400px, (max-width: 900px) 600px, 100vw"
+                  width="600" height="400"
                   loading="lazy"
-                  src="./images/optimized/colaboration.webp"
-                  width="800"
                 />
                 <span class="article-category">Dev Tools</span>
               </div>
@@ -246,17 +221,17 @@
                   collaboration and project management in 2025.
                 </p>
               </div>
-             
             </article>
 
             <article class="article-card" data-category="ai">
               <div class="article-image">
                 <img
                   alt="The Rise of AI Agents in Software Development: A 2025 Guide"
-                  height="400"
-                  loading="lazy"
                   src="images/optimized/aiagents.webp"
-                  width="800"
+                  srcset="images/optimized/aiagents.webp 1x, images/optimized/aiagents.webp 2x"
+                  sizes="(max-width: 600px) 400px, (max-width: 900px) 600px, 100vw"
+                  width="600" height="400"
+                  loading="lazy"
                 />
                 <span class="article-category">AI Tools</span>
               </div>
@@ -282,10 +257,11 @@
               <div class="article-image">
                 <img
                   alt="The Best AI Coding Assistants for Developers in 2025"
-                  height="400"
-                  loading="lazy"
                   src="images/optimized/codingassistant.webp"
-                  width="800"
+                  srcset="images/optimized/codingassistant.webp 1x, images/optimized/codingassistant.webp 2x"
+                  sizes="(max-width: 600px) 400px, (max-width: 900px) 600px, 100vw"
+                  width="600" height="400"
+                  loading="lazy"
                 />
                 <span class="article-category">AI Tools</span>
               </div>
@@ -310,10 +286,11 @@
               <div class="article-image">
                 <img
                   alt="Small Language Models: The Future of On-Device AI for Developers"
-                  height="400"
-                  loading="lazy"
                   src="images/optimized/tinymodel.webp"
-                  width="800"
+                  srcset="images/optimized/tinymodel.webp 1x, images/optimized/tinymodel.webp 2x"
+                  sizes="(max-width: 600px) 400px, (max-width: 900px) 600px, 100vw"
+                  width="600" height="400"
+                  loading="lazy"
                 />
                 <span class="article-category">AI Tools</span>
               </div>
@@ -339,10 +316,11 @@
               <div class="article-image">
                 <img
                   alt="How AI is Transforming Software Testing: 2025 Insights"
-                  height="400"
-                  loading="lazy"
                   src="images/optimized/testing.webp"
-                  width="800"
+                  srcset="images/optimized/testing.webp 1x, images/optimized/testing.webp 2x"
+                  sizes="(max-width: 600px) 400px, (max-width: 900px) 600px, 100vw"
+                  width="600" height="400"
+                  loading="lazy"
                 />
                 <span class="article-category">AI Tools</span>
               </div>
@@ -367,10 +345,11 @@
               <div class="article-image">
                 <img
                   alt="Developer Tools for Performance Monitoring and Observability in 2025"
-                  height="400"
+                  src="images/optimized/performance.webp"
+                  srcset="images/optimized/performance.webp 1x, images/optimized/performance.webp 2x"
+                  sizes="(max-width: 600px) 400px, (max-width: 900px) 600px, 100vw"
+                  width="600" height="400"
                   loading="lazy"
-                  src="./images/optimized/performance.webp"
-                  width="800"
                 />
                 <span class="article-category">Dev Tools</span>
               </div>
@@ -396,10 +375,11 @@
               <div class="article-image">
                 <img
                   alt="AI-Powered DevOps: Streamlining CI/CD in 2025"
-                  height="400"
-                  loading="lazy"
                   src="images/optimized/cicd.webp"
-                  width="800"
+                  srcset="images/optimized/cicd.webp 1x, images/optimized/cicd.webp 2x"
+                  sizes="(max-width: 600px) 400px, (max-width: 900px) 600px, 100vw"
+                  width="600" height="400"
+                  loading="lazy"
                 />
                 <span class="article-category">AI Tools</span>
               </div>

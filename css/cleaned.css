@@ -1,14 +1,14 @@
 /* Base Styles - Optimized for performance */
 :root {
-  --primary-color: #3a86ff;
+  --primary-color: #265ecf; /* was #3a86ff, darkened for better contrast */
   --secondary-color: #8338ec;
-  --accent-color: #ff006e;
+  --accent-color: #d6005c; /* was #ff006e, darkened for better contrast */
   --dark-color: #0d1117;
   --darker-color: #090b0f;
   --light-color: #f8f9fa;
-  --text-color: #333;
-  --light-text: #f8f9fa;
-  --gray-color: #495057;
+  --text-color: #222; /* was #333, slightly darker */
+  --light-text: #f1f1f1; /* was #f8f9fa, slightly darker for contrast on dark */
+  --gray-color: #343a40; /* was #495057, now darker for better contrast */
   --light-gray: #e9ecef;
   --container-width: 1200px;
   --header-height: 70px;
@@ -85,8 +85,9 @@ img {
 
 .btn-outline {
   background: transparent;
-  border: 2px solid var(--primary-color);
+  border: 2.5px solid var(--primary-color);
   color: var(--primary-color);
+  font-weight: 600;
 }
 
 .btn-outline:hover {
@@ -428,7 +429,7 @@ nav {
 
 .newsletter p {
   margin-bottom: 2rem;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 /* Footer Styles - Simplified */
@@ -437,8 +438,6 @@ footer {
   color: var(--light-text);
   padding: 4rem 0 2rem;
 }
-
-
 
 .footer-logo {
   flex: 1 1 300px;
@@ -488,6 +487,7 @@ footer {
 .links-group ul li a:hover {
   color: var(--primary-color);
 }
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -509,7 +509,7 @@ social-links li a i {
   text-align: center;
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  opacity: 0.7;
+  opacity: 1;
   font-size: 0.9rem;
 }
 
@@ -778,10 +778,10 @@ social-links li a i {
 
 .post-content a {
   color: var(--primary-color);
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: 600;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s;
-  font-weight: 500;
 }
 
 .post-content a:hover {
@@ -914,8 +914,9 @@ social-links li a i {
   }
 }
 
-.accent {
-  color: var(--accent-color);
+.accent, .highlight, .read-more, .topic-link, .view-all, .post-content a {
+  text-decoration: underline;
+  font-weight: 600;
 }
 
 .topics {
@@ -1440,7 +1441,7 @@ social-links li a i {
 
 .cta p {
   margin-bottom: 2rem;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .newsletter-form {
@@ -1492,15 +1493,12 @@ social-links li a i {
   }
   .post-main h1, .post-content h1 {
     font-size: 1.65rem;
-    line-height: 1.25;
   }
   .post-content h2 {
     font-size: 1.25rem;
-    line-height: 1.22;
   }
   .post-content h3 {
     font-size: 1.13rem;
-    line-height: 1.18;
   }
   .post-content p, .post-content ul {
     margin-bottom: 1.6rem;
@@ -1585,4 +1583,8 @@ social-links li a i {
   .post-layout {
     padding: 3rem 0rem;
   }
+}
+
+.footer-bottom, .newsletter p, .cta p {
+  opacity: 1 !important;
 }
