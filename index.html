@@ -12,6 +12,7 @@
 <link href="images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
 <link href="images/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png"/>
 <link href="site.webmanifest" rel="manifest"/>
+<link href="css/cleaned-home.css" rel="stylesheet"/>
 <title>Rohan Unbeg - AI &amp; Development Tools Blog</title>
 <meta content="Discover the latest AI tools, development resources, and tech insights at Rohan Unbeg's blog - your go-to source for optimizing your tech workflow" name="description"/>
 <meta content="AI tools, developer tools, tech blog, Rohan Unbeg, software engineering, programming, productivity, coding, automation, tech news" name="keywords"/>
@@ -26,7 +27,66 @@
 <meta content="Rohan Unbeg - AI &amp; Development Tools Blog" name="twitter:title"/>
 <meta content="Discover the latest AI tools, development resources, and tech insights at Rohan Unbeg's blog - your go-to source for optimizing your tech workflow" name="twitter:description"/>
 <meta content="https://rohanunbeg.com/images/hero-bg.jpg" name="twitter:image"/>
-<link href="css/cleaned.css" rel="stylesheet"/>
+<style>
+      :root {
+        --primary-color: #3a86ff;
+        --secondary-color: #8338ec;
+        --accent-color: #ff006e;
+        --dark-color: #0d1117;
+        --darker-color: #090b0f;
+        --light-color: #f8f9fa;
+        --text-color: #333;
+        --light-text: #f8f9fa;
+        --gray-color: #495057;
+        --light-gray: #e9ecef;
+        --container-width: 1200px;
+        --header-height: 70px;
+        --transition: all 0.2s ease;
+        --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        --gradient: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--light-color);
+        overflow-x: hidden;
+        text-rendering: optimizeSpeed;
+        min-width: 320px;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: var(--transition);
+      }
+      ul {
+        list-style: none;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+        height: auto;
+      }
+      .container {
+        max-width: var(--container-width);
+        margin: 0 auto;
+        padding: 0 2rem;
+        width: 100%;
+      }
+    </style>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -45,6 +105,7 @@
         "inLanguage": "en"
       }
     </script>
+<script data-goatcounter="https://rohanunbeg.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <header>
@@ -52,14 +113,14 @@
 <div class="logo">
 <a href="index.html">Rohan Unbeg</a>
 </div>
-<nav>
+<nav aria-label="Main Navigation">
 <ul class="nav-links">
 <li><a class="active" href="index.html">Home</a></li>
 <li><a href="blog.html">Blog</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
-<div class="burger">
+<div aria-label="Open navigation menu" class="burger" role="button" tabindex="0">
 <div class="line1"></div>
 <div class="line2"></div>
 <div class="line3"></div>
@@ -144,7 +205,103 @@
 <h2 class="section-title">Featured Articles</h2>
 <a class="view-all" href="blog.html">View All <i class="fas fa-arrow-right"></i></a>
 </div>
-<div class="articles-grid"><article class="article-card" data-category="ai"><div class="article-image"><img srcset="images/aiagents.webp 1x, images/optimized/aiagents.webp 2x" src="images/aiagents.webp" loading="lazy" alt="The Rise of AI Agents in Software Development: A 2025 Guide" /></div><div class="article-content"><div class="article-meta"><span><i class="far fa-calendar"></i> April 21, 2025</span><span><i class="far fa-clock"></i> 5 min read</span></div><h3 class="article-title"><a href="/blog/the-rise-of-ai-agents-in-software-development-a-2025-guide.html">The Rise of AI Agents in Software Development: A 2025 Guide</a></h3><p class="article-excerpt">Explore the latest in AI Tools with this insightful post.</p><a class="read-more" href="/blog/the-rise-of-ai-agents-in-software-development-a-2025-guide.html">Read More <i class="fas fa-arrow-right"></i></a></div></article><article class="article-card" data-category="ai"><div class="article-image"><img srcset="images/codingassistant.webp 1x, images/optimized/codingassistant.webp 2x" src="images/codingassistant.webp" loading="lazy" alt="The Best AI Coding Assistants for Developers in 2025" /></div><div class="article-content"><div class="article-meta"><span><i class="far fa-calendar"></i> April 21, 2025</span><span><i class="far fa-clock"></i> 5 min read</span></div><h3 class="article-title"><a href="/blog/the-best-ai-coding-assistants-for-developers-in-2025.html">The Best AI Coding Assistants for Developers in 2025</a></h3><p class="article-excerpt">Explore the latest in AI Tools with this insightful post.</p><a class="read-more" href="/blog/the-best-ai-coding-assistants-for-developers-in-2025.html">Read More <i class="fas fa-arrow-right"></i></a></div></article><article class="article-card" data-category="ai"><div class="article-image"><img srcset="images/tinymodel.webp 1x, images/optimized/tinymodel.webp 2x" src="images/tinymodel.webp" loading="lazy" alt="Small Language Models: The Future of On-Device AI for Developers" /></div><div class="article-content"><div class="article-meta"><span><i class="far fa-calendar"></i> April 21, 2025</span><span><i class="far fa-clock"></i> 5 min read</span></div><h3 class="article-title"><a href="/blog/small-language-models-the-future-of-on-device-ai-for-developers.html">Small Language Models: The Future of On-Device AI for Developers</a></h3><p class="article-excerpt">Explore the latest in AI Tools with this insightful post.</p><a class="read-more" href="/blog/small-language-models-the-future-of-on-device-ai-for-developers.html">Read More <i class="fas fa-arrow-right"></i></a></div></article><article class="article-card" data-category="ai"><div class="article-image"><img srcset="images/testing.webp 1x, images/optimized/testing.webp 2x" src="images/testing.webp" loading="lazy" alt="How AI is Transforming Software Testing in 2025" /></div><div class="article-content"><div class="article-meta"><span><i class="far fa-calendar"></i> April 21, 2025</span><span><i class="far fa-clock"></i> 5 min read</span></div><h3 class="article-title"><a href="/blog/how-ai-is-transforming-software-testing-in-2025.html">How AI is Transforming Software Testing in 2025</a></h3><p class="article-excerpt">Explore the latest in AI Tools with this insightful post.</p><a class="read-more" href="/blog/how-ai-is-transforming-software-testing-in-2025.html">Read More <i class="fas fa-arrow-right"></i></a></div></article><article class="article-card" data-category="ai"><div class="article-image"><img srcset="images/cicd.webp 1x, images/optimized/cicd.webp 2x" src="images/cicd.webp" loading="lazy" alt="AI-Powered DevOps: Streamlining CI/CD in 2025" /></div><div class="article-content"><div class="article-meta"><span><i class="far fa-calendar"></i> April 21, 2025</span><span><i class="far fa-clock"></i> 5 min read</span></div><h3 class="article-title"><a href="/blog/ai-powered-devops-streamlining-ci-cd-in-2025.html">AI-Powered DevOps: Streamlining CI/CD in 2025</a></h3><p class="article-excerpt">Explore the latest in AI Tools with this insightful post.</p><a class="read-more" href="/blog/ai-powered-devops-streamlining-ci-cd-in-2025.html">Read More <i class="fas fa-arrow-right"></i></a></div></article>
+<div class="articles-grid">
+<article class="article-card">
+<div class="article-image">
+<img alt="The Rise of AI Agents in Software Development: A 2025 Guide" height="400" loading="lazy" src="images/aiagents.webp" width="800"/>
+<span class="article-category">AI Tools</span>
+</div>
+<div class="article-content">
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> April 22, 2025</span>
+<span><i class="far fa-clock"></i> 5 min read</span>
+</div>
+<h3 class="article-title">
+<a href="blog/the-rise-of-ai-agents-in-software-development-a-2025-guide.html">The Rise of AI Agents in Software Development: A 2025 Guide</a>
+</h3>
+<p class="article-excerpt">Discover how AI agents are revolutionizing software development workflows and productivity in 2025.</p>
+</div>
+</article>
+<article class="article-card">
+<div class="article-image">
+<img alt="The Best AI Coding Assistants for Developers in 2025" height="400" loading="lazy" src="images/codingassistant.webp" width="800"/>
+<span class="article-category">AI Tools</span>
+</div>
+<div class="article-content">
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> April 22, 2025</span>
+<span><i class="far fa-clock"></i> 5 min read</span>
+</div>
+<h3 class="article-title">
+<a href="blog/the-best-ai-coding-assistants-for-developers-in-2025.html">The Best AI Coding Assistants for Developers in 2025</a>
+</h3>
+<p class="article-excerpt">Explore the leading AI coding assistants and how they're transforming developer productivity in 2025.</p>
+</div>
+</article>
+<article class="article-card">
+<div class="article-image">
+<img alt="Small Language Models: The Future of On-Device AI for Developers" height="400" loading="lazy" src="images/tinymodel.webp" width="800"/>
+<span class="article-category">AI Tools</span>
+</div>
+<div class="article-content">
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> April 22, 2025</span>
+<span><i class="far fa-clock"></i> 5 min read</span>
+</div>
+<h3 class="article-title">
+<a href="blog/small-language-models-the-future-of-on-device-ai-for-developers.html">Small Language Models: The Future of On-Device AI for Developers</a>
+</h3>
+<p class="article-excerpt">Understand why small language models are powering the next wave of on-device AI for developers.</p>
+</div>
+</article>
+<article class="article-card">
+<div class="article-image">
+<img alt="How AI is Transforming Software Testing: 2025 Insights" height="400" loading="lazy" src="images/testing.webp" width="800"/>
+<span class="article-category">AI Tools</span>
+</div>
+<div class="article-content">
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> April 22, 2025</span>
+<span><i class="far fa-clock"></i> 5 min read</span>
+</div>
+<h3 class="article-title">
+<a href="blog/how-ai-is-transforming-software-testing-in-2025.html">How AI is Transforming Software Testing: 2025 Insights</a>
+</h3>
+<p class="article-excerpt">See how artificial intelligence is driving innovation in software testing and QA practices.</p>
+</div>
+</article>
+<article class="article-card">
+<div class="article-image">
+<img alt="Developer Tools for Performance Monitoring and Observability in 2025" height="400" loading="lazy" src="images/default-post.jpg" width="800"/>
+<span class="article-category">Dev Tools</span>
+</div>
+<div class="article-content">
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> April 22, 2025</span>
+<span><i class="far fa-clock"></i> 5 min read</span>
+</div>
+<h3 class="article-title">
+<a href="blog/developer-tools-for-performance-monitoring-and-observability-in-2025.html">Developer Tools for Performance Monitoring and Observability in 2025</a>
+</h3>
+<p class="article-excerpt">A roundup of the best developer tools for monitoring and observability in modern software stacks.</p>
+</div>
+</article>
+<article class="article-card">
+<div class="article-image">
+<img alt="AI-Powered DevOps: Streamlining CI/CD in 2025" height="400" loading="lazy" src="images/cicd.webp" width="800"/>
+<span class="article-category">AI Tools</span>
+</div>
+<div class="article-content">
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> April 22, 2025</span>
+<span><i class="far fa-clock"></i> 5 min read</span>
+</div>
+<h3 class="article-title">
+<a href="blog/ai-powered-devops-streamlining-ci-cd-in-2025.html">AI-Powered DevOps: Streamlining CI/CD in 2025</a>
+</h3>
+<p class="article-excerpt">Learn how AI is streamlining CI/CD pipelines and transforming DevOps workflows in 2025.</p>
+</div>
+</article>
 </div>
 </div>
 </section>
@@ -211,6 +368,6 @@
 </div>
 </div>
 </footer>
-<script src="js/main.min.js" defer></script>
+<script defer="" src="js/main.min.js"></script>
 </body>
 </html>

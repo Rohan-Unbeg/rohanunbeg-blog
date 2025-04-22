@@ -39,3 +39,6 @@ images/tinymodel.webp
 
 # Allow optimized images
 !images/optimized/
+
+# Ignore source CSS file
+css/styles.css
