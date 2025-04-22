@@ -710,6 +710,12 @@ social-links li a i {
   }
 }
 
+.post-category {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 .post-featured-image {
   margin-bottom: 2.5rem;
   padding: 0.5rem 1rem;
@@ -1172,6 +1178,10 @@ social-links li a i {
     font-size: 0.9rem;
   }
 
+  .post-meta {
+    font-size: 0.8rem;
+  }
+
   h1 {
     font-size: 1.5rem;
   }
@@ -1192,6 +1202,10 @@ social-links li a i {
 
   .logo a {
     font-size: 1.3rem;
+  }
+
+  .post-category {
+    font-size: 0.7rem;
   }
 
   /* Ensure no zooming is required */
@@ -1515,6 +1529,12 @@ social-links li a i {
   display: flex;
   align-items: center;
   line-height: 1;
+  font-size: 1rem;
+}
+
+.post-category {
+  color: var(--primary-color);
+  font-weight: 500;
   font-size: 1rem;
 }
 

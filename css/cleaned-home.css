@@ -195,7 +195,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/hero-bg.jpg");
+  background-image: url("../images/optimized/hero-bg.webp");
   background-size: cover;
   background-position: center;
   opacity: 0.45;
@@ -369,21 +369,6 @@ nav {
   font-size: 0.85rem;
   color: var(--gray-color);
   margin-bottom: 1rem;
-}
-
-.read-more {
-  color: var(--primary-color);
-  font-weight: 500;
-  margin-top: auto;
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: color 0.2s;
-}
-
-.read-more:hover {
-  color: var(--secondary-color);
 }
 
 @media screen and (max-width: 768px) {

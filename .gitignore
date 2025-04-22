@@ -30,14 +30,8 @@ npm-debug.log*
 !site.webmanifest
 !_headers
 
-# Ignore original, non-optimized images (keep only optimized for production)
-images/aiagents.webp
-images/cicd.webp
-images/codingassistant.webp
-images/testing.webp
-images/tinymodel.webp
-
-# Allow optimized images
+# Ignore all images except optimized
+images/*
 !images/optimized/
 
 # Ignore source CSS file
